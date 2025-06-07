@@ -1,0 +1,690 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+/* Без точки, для всех элементов */
+/* С точкой, обращение к определенному элементу (Пример, обращение к header, внутри него находится nav, дальше ul и так далее */
+
+/* ы */
+
+/* distance between all alimony */
+* {
+    margin: 0; /* внешний отступ */
+    padding: 0; /* внутренний отступ */
+}
+
+/* basic font */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #070707;
+    font-weight: 400;
+    color: #fff;
+    font-size: 16px;
+}
+
+body::selection {
+    color: #DC7000;
+}
+
+button::selection {
+    color: #fff;
+}
+
+/* all link */
+а {
+    text-decoration: none; /* оформление текста "нижнее подчеркивание" */
+}
+
+a::selection {
+    color: #DC7000;
+}
+
+/* photo */
+img {
+    max-width: 100%;
+}
+
+/* class=wrapper */
+.wrapper {
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(26,14,1,1) 100%); /* градиент */
+    width: 100%;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 50px 0;
+}
+
+header .logo,
+footer .logo {
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+header nav {
+    float: right; /*рассположение на странице (слева, справа..) */
+    width: 50%;
+}
+
+header nav ul {
+    list-style:none; /* редактор списка (удалить точки, добавить линии и тд */
+    display: flex; /*определяет тип отображения элемента, как он будет отображаться на странице: как блок, строчный */
+    justify-content: space-between; /* расположение контента */
+    z-index: 2; /*Что-то вроде слоев, чем выше число, тем выше слой*/
+    position: relative; /*Позиционирование "relative" нужно использовать вместе с z-индексом, тогда слои будут работать*/
+}
+
+header nav ul li {
+    display: inline-block; /* строчный блок (чтобы была возможность редактировать элементы */
+}
+
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    background: #DC7000;
+    border-radius: 10px;
+    position: relative;
+    top: 10px;
+    left: -15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+    border-bottom: 5px solid #DC7000;
+}
+
+header nav ul li.btn a, 
+.form_place button {
+    background-color: #fa9012;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 500ms ease; /* Почитать в инете. В данном случае задержка при наведении*/
+}
+
+header nav ul li.btn a:hover,
+.form_place button:hover {  /* hover - эффект наведение */
+    background: #c7760d;
+}
+
+.hero {
+    padding-bottom: 100px;
+    position: relative;  /*Тоже самое, позиция и z-индекс для работы слоя*/
+    z-index: 1;
+}
+
+.hero--info {
+    width: 530px;
+    padding: 70px 25px;
+}
+
+.hero--info h2 {   /*Обращение к первому заголовку*/
+    font-weight: 600;
+    font-size: 20px;
+    color: #c7760d;
+}
+
+.hero--info h1 {
+    font-weight: 600;
+    font-size: 50px;
+    color: #fff;
+    line-height: 140%;
+}
+
+.hero--info p {
+    font-weight: 500;
+    line-height: 170%;  /*Межстрочная высота*/
+    margin: 30px 0;
+}
+
+.hero--info .btn,
+.sectionAbout .about_btn {
+    background: #FA8305;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 40px;
+    border: 0;
+    transition: all 500ms ease;
+    font-size: 17px;
+}
+
+.hero--info .btn:hover,
+.sectionAbout .about_btn:hover {
+    background: #c7760d;
+    cursor: pointer;  /*Меняет курсор при наведении*/
+    transform: scale(1.1); /*scale - увеличение кнопки*/
+}
+
+.hero img {
+    position: absolute;
+    top: -170px;
+    right: -183px;
+    height: 760px;
+}
+
+.trending {
+    padding: 50px;
+}
+
+.trending h3 {
+    font-weight:600;
+    font-size: 31px;
+}
+
+.trending .see-all {
+    margin-top: -8px;
+    float: right;
+    padding: 18px 40px;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #25211D;
+    border-radius: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.trending .see-all:hover {
+    transform: scale(1.1);
+    transition: all 500ms ease;
+}
+
+
+.trending .games {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 60px 0;
+}
+
+.trending .games img {
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.trending .games .block:hover img {
+    transform: scale(1.1);
+}
+
+.trending .games span {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.games span img {
+    margin-right: 5px;
+}
+
+.trending section {
+    display: flex;
+    justify-content: center;
+}
+
+.trending section h2 {
+    font-size: 32px;
+    text-align: center;
+    line-height: 2em;
+    max-width: 800px;
+    letter-spacing: 1px;
+    padding: 27px 0;
+}
+
+.containerdots {
+    display: flex;
+    justify-content: space-between;
+}
+
+.loremLeft {
+    max-width: 600px;
+    padding-bottom: 30px;
+}
+
+.loremLeft .main {
+    letter-spacing: 1px;
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+
+.loremLeft .loremdop {
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+section .dots {
+    margin-right: 105px;
+    margin-top: 150px;
+}
+
+.spider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -88px;
+    padding-bottom: 120px;
+}
+
+.spider img {
+    transition: all 500ms ease;
+}
+
+.spider:hover img {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.backgroundimg {
+    margin: 140px 0;
+    z-index: 100;
+}
+
+.device {
+    background: url(/img/background/background.png) no-repeat center center fixed;
+    background-size: cover;
+}
+
+section .device_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 1px;
+}
+
+section .device_text h2 {
+    text-align: center;
+    max-width: 880px;
+    padding-top: 95px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+section .device_text p {
+    text-align: center;
+    max-width: 950px;
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.device .table {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    list-style: none;
+    margin-top: 60px;
+}
+
+.device .table li {
+    text-align: center;
+    width: 20%;
+    margin: 40px 2.5%;
+    transition: all 500ms ease;
+}
+
+.device .table li img, 
+p {
+    margin-bottom: 27px;
+}
+
+.device .table li img:hover {
+    transform: scale(1.1);
+}
+
+.OurRecentProjects {
+    background: #090300 100%;
+    width: 100%;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.OurRecentProjects h2 {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.OurRecentProjects p {
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 70px;
+}
+
+.OurRecentProjects .photoClubs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.OurRecentProjects .photoClubs img {
+    padding: 10px 10px;
+    cursor: pointer;
+    border: 0;
+}
+
+.OurRecentProjects .photoClubs img:hover {
+    transform: scale(1.02);
+    transition: all 500ms ease;
+}
+
+.OurRecentProjects .see-all_2 {
+    text-align: center;
+    padding: 18px 40px;
+    margin-top: 50px;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #25211D;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 100px;
+    display: inline-block;
+}
+
+.OurRecentProjects .see-all_2:hover {
+    transform: scale(1.1);
+    transition: all 500ms ease;
+}
+
+.form {
+    padding-bottom: 100px;
+    width: 100%;
+    background: #090300 0%;
+}
+
+.form h2 {
+    letter-spacing: 1px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.form .form_p {
+    margin-bottom: 50px;
+}
+
+.form .email {
+    background-color: #1C140F;
+    padding: 40px 3%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form .email h3 {
+    font-weight: normal;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.form .email p {
+    margin: 0 auto;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.form_place input {
+    position: relative;
+    z-index: 100;
+    right: -74px;
+    width: 230px;
+    height: 45px;
+    padding-right: 115px;
+    padding-left: 10px;
+    background-color: #fff;
+    outline: none;
+    border-radius: 8px;
+    border: 0;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    color: #898989;
+}
+
+.form_place button  {
+    position: relative;
+    z-index: 200;
+    right: 24px;
+    border-radius: 8px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding-left: 90px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.footer_colomn_1 {
+    width: 30%;
+}
+
+.footer_colomn_1 p {
+    margin-top: 35px;
+    margin-bottom: 40px;
+}
+
+.footer_colomn_1 a {
+    text-decoration: none;
+    color:#fff;
+    font-family: Poppins;
+}
+
+.footer_colomn_1 a:hover {
+    color:#FA8305;
+}
+
+.footer_colomn_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 7%;
+    padding-left: 70px;
+}
+
+.footer_colomn_2 a {
+    color:#fff;
+    text-decoration: none;
+    padding: 4px 0;
+    font-weight: 400;
+    margin-left: -70px;
+}
+
+.footer_colomn_2 a:hover {
+    color: #FA8305;
+}
+
+.footer_colomn_2 .first {
+    margin-bottom: 30px;
+}
+
+.footer_colomn_3 {
+    width: 20%;
+    text-align: start;
+}
+
+.footer_colomn_3 .number {
+    padding-top: 3px;
+}
+
+.footer_colomn_3 .number:hover {
+    cursor: pointer;
+    color:#FA8305;
+}
+
+.footer_colomn_3 .firstP {
+    padding-top: 25px;
+}
+
+.footer_colomn_4 img:hover {
+    transform: scale(1.2);
+    transition: transform 500ms;
+    cursor: pointer;
+}
+
+.end {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #fff;
+}
+
+.about_nav {
+    margin-bottom: 35px;
+}
+
+.about_nav a {
+    text-decoration: none;
+}
+
+.sectionAbout {
+    padding-left: 40px;
+    padding-top: 78px;
+    padding-bottom: 100px;
+}
+
+.sectionAbout .about_home {
+    color:#fff;
+}
+
+.sectionAbout .about_home:hover {
+    color:#c7760d;
+}
+
+
+.sectionAbout .about_active {
+    color:#DC7000;
+}
+
+.sectionAbout .about_text {
+    width: 40%;
+}
+
+.sectionAbout .about_text h1 {
+    font-size: 30px;
+    padding-bottom: 30px;
+    line-height: 1.7;
+}
+
+.sectionAbout .about_text p {
+    line-height: 2;
+}
+
+.sectionAbout .about_btn {
+    margin-top: 50px;
+}
+
+.sectionAbout .img--cat {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 130px;
+    z-index: 100;
+}
+
+.sectionAbout .img--cat .block--label {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background-color: #333333;
+    margin-top: -74px;
+    width: 180px;
+    height: 67px;
+    z-index: 200;
+}
+
+.sectionAbout .img--cat .block--label img {
+    cursor: pointer;
+}
+
+.sectionAbout .img--cat .block--label p {
+    margin-top: 25px;
+}
+
+.work__blocks {
+    margin-top: 200px;
+    margin-bottom: 40px;
+}
+
+.work__blocks h2 {
+    margin-bottom: 60px;
+}
+
+.work__blocks .blocks {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 90px;
+}
+
+.work__blocks .blocks .section {
+    width: 24%;
+    padding: 0 35px;
+    border-radius: 20px;
+    background-color: #1C140F;
+}
+
+.work__blocks .blocks .section p {
+    font-size: 14px;
+}
+
+.work__blocks .blocks .section .color__purp,
+.work__blocks .blocks .section .color__orang,
+.work__blocks .blocks .section .color__green {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 8px;
+    font-size: 13px;
+    background-color: rgb(176, 0, 220, 17%);
+    width: 40%;
+}
+
+.work__blocks .blocks .section .color__orang {
+    background-color: rgb(220, 66, 0, 11%);
+}
+
+.work__blocks .blocks .section .color__green {
+    background-color: rgb(0, 220, 141, 11%);
+}
+
+.work__blocks .blocks .section h4 {
+    margin-bottom: 15px;
+}
+
+.work__blocks .blocks .section .margin__p {
+    margin-bottom: 60px;
+}
+
+.img__info {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    padding-bottom: 100px;
+    background-color: #1C140F;
+}
