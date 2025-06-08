@@ -281,7 +281,7 @@ section .dots {
 }
 
 .device {
-    background: url(/img/background/background.png) no-repeat center center fixed;
+    background: url(../img/background/background.png) no-repeat center center fixed;
     background-size: cover;
 }
 
