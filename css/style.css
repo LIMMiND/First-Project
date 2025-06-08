@@ -90,6 +90,7 @@ header nav ul li a {
 
 header nav ul li:not(.active):not(.btn) a:hover {
     border-bottom: 5px solid #DC7000;
+    border-radius: 4px;
 }
 
 header nav ul li.btn a, 
