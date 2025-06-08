@@ -1,17 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
 
-/* Без точки, для всех элементов */
-/* С точкой, обращение к определенному элементу (Пример, обращение к header, внутри него находится nav, дальше ul и так далее */
-
-/* ы */
-
-/* distance between all alimony */
 * {
-    margin: 0; /* внешний отступ */
-    padding: 0; /* внутренний отступ */
+    margin: 0;
+    padding: 0;
 }
 
-/* basic font */
 body {
     font-family: "Poppins", sans-serif;
     background-color: #070707;
@@ -28,23 +21,20 @@ button::selection {
     color: #fff;
 }
 
-/* all link */
 а {
-    text-decoration: none; /* оформление текста "нижнее подчеркивание" */
+    text-decoration: none;
 }
 
 a::selection {
     color: #DC7000;
 }
 
-/* photo */
 img {
     max-width: 100%;
 }
 
-/* class=wrapper */
 .wrapper {
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(26,14,1,1) 100%); /* градиент */
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(26,14,1,1) 100%);
     width: 100%;
 }
 
@@ -65,20 +55,20 @@ footer .logo {
 }
 
 header nav {
-    float: right; /*рассположение на странице (слева, справа..) */
+    float: right;
     width: 50%;
 }
 
 header nav ul {
-    list-style:none; /* редактор списка (удалить точки, добавить линии и тд */
-    display: flex; /*определяет тип отображения элемента, как он будет отображаться на странице: как блок, строчный */
-    justify-content: space-between; /* расположение контента */
-    z-index: 2; /*Что-то вроде слоев, чем выше число, тем выше слой*/
-    position: relative; /*Позиционирование "relative" нужно использовать вместе с z-индексом, тогда слои будут работать*/
+    list-style:none; 
+    display: flex; 
+    justify-content: space-between; 
+    z-index: 2; 
+    position: relative; 
 }
 
 header nav ul li {
-    display: inline-block; /* строчный блок (чтобы была возможность редактировать элементы */
+    display: inline-block; 
 }
 
 header nav ul li.active::after {
@@ -107,17 +97,17 @@ header nav ul li.btn a,
     background-color: #fa9012;
     padding: 9px 17px;
     border-radius: 5px;
-    transition: all 500ms ease; /* Почитать в инете. В данном случае задержка при наведении*/
+    transition: all 500ms ease;
 }
 
 header nav ul li.btn a:hover,
-.form_place button:hover {  /* hover - эффект наведение */
+.form_place button:hover {
     background: #c7760d;
 }
 
 .hero {
     padding-bottom: 100px;
-    position: relative;  /*Тоже самое, позиция и z-индекс для работы слоя*/
+    position: relative; 
     z-index: 1;
 }
 
@@ -126,7 +116,7 @@ header nav ul li.btn a:hover,
     padding: 70px 25px;
 }
 
-.hero--info h2 {   /*Обращение к первому заголовку*/
+.hero--info h2 {
     font-weight: 600;
     font-size: 20px;
     color: #c7760d;
@@ -141,7 +131,7 @@ header nav ul li.btn a:hover,
 
 .hero--info p {
     font-weight: 500;
-    line-height: 170%;  /*Межстрочная высота*/
+    line-height: 170%;
     margin: 30px 0;
 }
 
@@ -159,8 +149,8 @@ header nav ul li.btn a:hover,
 .hero--info .btn:hover,
 .sectionAbout .about_btn:hover {
     background: #c7760d;
-    cursor: pointer;  /*Меняет курсор при наведении*/
-    transform: scale(1.1); /*scale - увеличение кнопки*/
+    cursor: pointer; 
+    transform: scale(1.1); 
 }
 
 .hero img {
