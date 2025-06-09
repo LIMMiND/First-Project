@@ -49,7 +49,10 @@ header {
 
 header .logo,
 footer .logo {
+    cursor: pointer;
     text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
     font-size: 29px;
     font-weight: 800;
 }
