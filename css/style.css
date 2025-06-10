@@ -394,7 +394,7 @@ p {
     transition: all 500ms ease;
 }
 
-.form {
+.form:not(.about__form) {
     padding-bottom: 100px;
     width: 100%;
     background: #090300 0%;
@@ -618,7 +618,7 @@ footer {
 
 .work__blocks {
     margin-top: 200px;
-    margin-bottom: 40px;
+    margin-bottom: 120px;
 }
 
 .work__blocks h2 {
@@ -672,6 +672,7 @@ footer {
 
 .work__blocks .blocks .section .margin__p {
     margin-bottom: 60px;
+    line-height: 1.8;
 }
 
 .img__info {
@@ -679,6 +680,68 @@ footer {
     display: flex;
     position: absolute;
     left: 0;
-    padding-bottom: 100px;
+    padding-top: 100px;
     background-color: #1C140F;
+}
+
+.img__info img {
+    padding-left: 256px;
+}
+
+.img__info .img__text {
+    padding-left: 50px;
+    padding-right: 245px;
+}
+
+.img__info .img__text h4 {
+    padding: 20px 0;
+    font-size: 16px;
+}
+
+.img__info .img__text h2 {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0.9px;
+    line-height: 1.5;
+    padding-bottom: 45px;
+}
+
+.img__info .img__text p {
+    line-height: 2;
+}
+
+.our__team {
+    margin-top: 840px;
+}
+
+.our__team h3 {
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.our__team .section__workers {
+    display: flex;
+    justify-content: space-around;
+}
+
+.our__team .section__workers .workers {
+    text-align: center;
+    padding: 35px 64px 5px;
+    border-radius: 20px;
+    background-color: #1C140F;
+}
+
+.our__team .section__workers .workers h4 {
+    font-size: 18px;
+    letter-spacing: 1.1px;
+    margin-bottom: 5px;
+}
+
+.our__team .section__workers .workers p {
+    font-weight: light;
+}
+
+.about__form {
+    margin-top: 170px;
+    margin-bottom: 100px;
 }
