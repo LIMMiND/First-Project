@@ -685,7 +685,7 @@ footer {
 }
 
 .img__info img {
-    padding-left: 256px;
+    padding-left: 410px;
 }
 
 .img__info .img__text {
@@ -704,10 +704,12 @@ footer {
     letter-spacing: 0.9px;
     line-height: 1.5;
     padding-bottom: 45px;
+    margin-right: 150px;
 }
 
 .img__info .img__text p {
     line-height: 2;
+    margin-right: 170px;
 }
 
 .our__team {
